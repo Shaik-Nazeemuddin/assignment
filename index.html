@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!-- You should not change the HTML source code. -->
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- This policy forbids "on" attributes, inline scripts, the "eval" function, and third-party content. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+        <title>Front-end developer test</title>
+
+<!-- Write your CSS in main.css -->
+        <link rel="stylesheet" href="styles/main.css" />
+
+<!-- Feel free to use standard JavaScript, DOM, and browser objects; you may also use jQuery if you prefer. -->
+        <!-- <script src="scripts/jquery-3.3.1.min.js"></script> -->
+
+<!-- Write your JavaScript code in main.js -->
+        <script src="scripts/main.js"></script>
+
+    </head>
+
+    <body>
+
+        <header role="banner">
+            <div class="top-nav">
+                <div class="logo">
+                    <img src="images/black-sun-plc-logo.svg" alt="Black Sun Plc" />
+                </div>
+
+                <form id="search-form" method="get" action="seach.action" role="search">
+    <!-- When no search term is provided the form MUST not submit. -->
+                    <fieldset>
+                        <input type="text" name="q" placeholder="Search this website" role="searchbox" />
+                        <button type="submit">&#x1f50e;</button>
+                    </fieldset>
+                </form>
+            </div>
+            <nav role="navigation">
+                <ul>
+                    <li title="Discover what we do"><a href="about-us.html">About Us</a></li>
+                    <li title="What we can do for you"><a href="our-solutions.html">Our solutions</a></li>
+                    <li title="Send us a message"><a href="contact-us.html">Contact Us</a></li>
+                    <li title="Our postal address and maps"><a href="find-us.html">Find Us</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main role="main">
+
+            <h1>Front-end developer test instructions</h1>
+            <ul>
+                <li>You have 90 minutes to complete this test.</li>
+                <li>You should not change the HTML source code.</li>
+                <li>The page should be responsive across devices from phone to desktop.</li>
+                <li>JavaScript should be compatible with ECMAScript 5<sup>th</sup> edition to support IE 11 and above.</li>
+                <li>Use techniques that generally work in IE 11+ browsers and iPhone 5 or newer (but we won&rsquo;t test this).</li>
+                <li>The font should be sans-serif and the size should be 16px on larger screens and 12px on smaller screens.</li>
+            </ul>
+
+            <article id="tabs-with-manual-activation">
+
+                <header>
+                    <h2>Tabs with manual activation</h2>
+                    <p>
+                        Initially, the corresponding <em>tabpanel</em> for the
+                        <em>tab</em> with <code>aria-selected="true"</code>
+                        should be visible. When the website visitor activates a
+                        button in the <em>tablist</em>, the <code>aria-selected</code>
+                        attributes should be updated and only the corresponding
+                        <em>tabpanel</em> should be visible. A single tab
+                        panel should be visible.
+                    </p>
+                </header>
+
+                <div data-widget="tabs" class="tabs">
+
+                    <ul role="tablist" class="tablist">
+                        <li><button type="button" id="tabfirst" role="tab" aria-controls="tabpanel-first" aria-selected="true" >First tab</button></li>
+                        <li><button type="button" id="tabsecond" role="tab" aria-controls="tabpanel-second" aria-selected="false"  >Second tab</button></li>
+                        <li><button type="button" id="tabthird" role="tab" aria-controls="tabpanel-third" aria-selected="false" >Third tab</button></li>
+                    </ul>
+
+                    <section id="tabpanelfirst" class="tab-content active" role="tabpanel" aria-labelledby="tab-first">
+                        <header>
+                            <h3>First tab panel</h3>
+                        </header>
+                        <p>
+                            Duis venenatis nisl a dolor fermentum, in fringilla magna
+                            fermentum. Vivamus fringilla scelerisque justo, ut aliquet nisi
+                            dapibus sit amet. Duis sed tellus neque. Vivamus vitae lorem
+                            egestas, vehicula tellus eget, ultricies risus. Etiam in gravida
+                            turpis, ut elementum ante. Phasellus blandit ex quis bibendum
+                            blandit. Suspendisse placerat fringilla augue eget interdum.
+                        </p>
+                    </section>
+
+                    <section id="tabpanelsecond" class="tab-content" role="tabpanel" aria-labelledby="tab-second">
+                        <header>
+                            <h3>Second tab panel</h3>
+                        </header>
+                        <p>
+                            Nunc ex nunc, euismod vitae turpis eu, elementum bibendum
+                            felis. Ut nulla ligula, tincidunt quis tortor vitae, venenatis
+                            sollicitudin elit. In porttitor ipsum tortor, sed semper nulla
+                            ornare at. Donec pretium cursus arcu sit amet vestibulum.
+                            Quisque ac leo ac turpis malesuada iaculis volutpat nec turpis.
+                            Etiam pulvinar, massa at vehicula luctus, nibh magna consectetur
+                            justo, faucibus accumsan velit dolor sed odio. Mauris tincidunt
+                            orci lacus, in viverra arcu suscipit non. Ut porttitor mi ac
+                            lectus rhoncus tincidunt vitae et dolor.
+                        </p>
+                    </section>
+
+                    <section id="tabpanelthird" class="tab-content" role="tabpanel" aria-labelledby="tab-third">
+                        <header>
+                            <h3>Third tab panel</h3>
+                        </header>
+                        <p>
+                            Donec lacinia turpis sit amet diam tincidunt, vel feugiat
+                            tellus interdum. Curabitur mauris felis, eleifend et lacus eget,
+                            cursus molestie velit. Quisque auctor diam ut nisi convallis
+                            placerat. Donec urna erat, aliquam non diam vitae, feugiat
+                            ultrices metus. In sit amet neque vitae est sodales faucibus
+                            eget at tellus. Suspendisse potenti. Duis sem nunc, posuere nec
+                            viverra ut, euismod quis tortor. Pellentesque congue facilisis
+                            tristique. Vestibulum tempor ullamcorper libero, ut pharetra
+                            purus pellentesque quis. Maecenas et cursus dolor, tincidunt
+                            vestibulum velit. Phasellus feugiat, enim vel vehicula varius,
+                            ligula orci tincidunt justo, quis aliquam leo orci et elit. Sed
+                            et imperdiet sapien, eget convallis dolor.
+                        </p>
+                    </section>
+
+                </div>
+
+            </article>
+
+            <article id="accordion-multiple-opened">
+
+                <header>
+                    <h2>Accordion allowing multiple panels to be opened</h2>
+                    <p>
+                        Initially, the corresponding <em>accordion-panel</em>
+                        for the <em>accordion-button</em> with
+                        <code>aria-expanded="true"</code> should be open. When
+                        the website visitor activates a button in the
+                        <em>accordion</em>, the <code>aria-expanded</code>
+                        attributes should be updated and the corresponding
+                        <em>accordion-panel</em> should open or close. Zero,
+                        one, or many accordion panels may be opened at any
+                        time.
+                    </p>
+                </header>
+
+                <div data-widget="accordion">
+
+                    <dl><!-- "dl" means "description list" -->
+
+                        <dt><!-- "dt" means "description term" -->
+                            <button type="button" id="accordion-button-first" aria-controls="accordion-panel-first" aria-expanded="true">
+                                <span class="label">First accordion button</span>
+<!-- transition the icon through a 180 degrees rotation from "closed" to "open" -->
+                                <span class="icon">&#9650;</span>
+                            </button>
+                        </dt>
+
+                        <dd id="accordion-panel-first" aria-labelledby="accordion-button-first"><!-- "dd" means "description" -->
+                            <header>
+                                <h3>First accordion panel</h3>
+                            </header>
+                            <p>
+                                Duis venenatis nisl a dolor fermentum, in fringilla magna
+                                fermentum. Vivamus fringilla scelerisque justo, ut aliquet nisi
+                                dapibus sit amet. Duis sed tellus neque. Vivamus vitae lorem
+                                egestas, vehicula tellus eget, ultricies risus. Etiam in gravida
+                                turpis, ut elementum ante. Phasellus blandit ex quis bibendum
+                                blandit. Suspendisse placerat fringilla augue eget interdum.
+                            </p>
+                        </dd>
+
+                        <dt>
+                            <button type="button" id="accordion-button-second" aria-controls="accordion-panel-second" aria-expanded="false">
+                                <span class="label">Second accordion button</span>
+<!-- transition the icon through a 180 degrees rotation from "closed" to "open" -->
+                                <span class="icon">&#9650;</span>
+                            </button>
+                        </dt>
+
+                        <dd id="accordion-panel-second" aria-labelledby="accordion-button-second">
+                            <header>
+                                <h3>Second accordion panel</h3>
+                            </header>
+                            <p>
+                                Nunc ex nunc, euismod vitae turpis eu, elementum bibendum
+                                felis. Ut nulla ligula, tincidunt quis tortor vitae, venenatis
+                                sollicitudin elit. In porttitor ipsum tortor, sed semper nulla
+                                ornare at. Donec pretium cursus arcu sit amet vestibulum.
+                                Quisque ac leo ac turpis malesuada iaculis volutpat nec turpis.
+                                Etiam pulvinar, massa at vehicula luctus, nibh magna consectetur
+                                justo, faucibus accumsan velit dolor sed odio. Mauris tincidunt
+                                orci lacus, in viverra arcu suscipit non. Ut porttitor mi ac
+                                lectus rhoncus tincidunt vitae et dolor.
+                            </p>
+                        </dd>
+
+                        <dt>
+                            <button type="button" id="accordion-button-third" aria-controls="accordion-panel-third" aria-expanded="false">
+                                <span class="label">Third accordion button</span>
+<!-- transition the icon through a 180 degrees rotation from "closed" to "open" -->
+                                <span class="icon">&#9650;</span>
+                            </button>
+                        </dt>
+
+                        <dd id="accordion-panel-third" aria-labelledby="accordion-button-third">
+                            <header>
+                                <h3>Third accordion panel</h3>
+                            </header>
+                            <p>
+                                Donec lacinia turpis sit amet diam tincidunt, vel feugiat
+                                tellus interdum. Curabitur mauris felis, eleifend et lacus eget,
+                                cursus molestie velit. Quisque auctor diam ut nisi convallis
+                                placerat. Donec urna erat, aliquam non diam vitae, feugiat
+                                ultrices metus. In sit amet neque vitae est sodales faucibus
+                                eget at tellus. Suspendisse potenti. Duis sem nunc, posuere nec
+                                viverra ut, euismod quis tortor. Pellentesque congue facilisis
+                                tristique. Vestibulum tempor ullamcorper libero, ut pharetra
+                                purus pellentesque quis. Maecenas et cursus dolor, tincidunt
+                                vestibulum velit. Phasellus feugiat, enim vel vehicula varius,
+                                ligula orci tincidunt justo, quis aliquam leo orci et elit. Sed
+                                et imperdiet sapien, eget convallis dolor.
+                            </p>
+                        </dd>
+
+                    </dl>
+
+                </div>
+
+            </article>
+
+        </main>
+
+        <footer role="contentinfo">
+
+            <div class="copyright">
+                &copy; Black Sun Plc
+            </div>
+
+            <address>
+                Fulham Palace<br />
+                Bishop&rsquo;s Avenue<br />
+                London, SW6 6EA<br />
+            </address>
+
+        </footer>
+
+    </body>
+
+</html>

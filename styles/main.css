@@ -1,0 +1,52 @@
+body {
+    font-size:16px;
+    color:#000000;
+    padding:0 25px;
+    margin:0;
+}
+.top-nav {
+    display:flex;
+}
+.top-nav div, .top-nav form {
+    flex-direction: row;
+    width:80%;
+}
+.top-nav form {
+   margin-top:20px;
+   float:right;
+   width:20%;
+}
+nav ul {
+    display:flex;
+    list-style:none;
+}
+nav ul li {
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding:15px;
+    width:25%;
+    font-size:20px;
+    cursor:pointer;
+}
+.tabs .tablist {
+    list-style:none;
+    display:flex;
+}
+.tablist li {
+    flex-direction:row;
+    padding:15px 5px;
+}
+.tab-content { display:none; }
+.tab-content.active { display:block;}
+button { cursor:pointer; }
+.hide { display:none; }
+#accordion-multiple-opened button{
+    width:100%;
+    text-align:left;
+    margin-bottom:5px;
+}
+#accordion-multiple-opened button span{
+    text-align:right;
+}
+dd { margin-left:0; }
